@@ -4,5 +4,9 @@
   "main": {},
   "mumbaitestnet": {
     "MinorNFT": "0x86d70E1D2F3420B88c961641dFe965DB471E875E"
+  },
+  "bsctest": {
+    "LoyNFT": "0x9E7388Bb54dFE5d7eD25Eb599B4A21C245aCbf28",
+    "LoyNFTMKP": "0x138A21e2802c73e59E42b1f38c0778103852Ed7A"
   }
 }
