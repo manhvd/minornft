@@ -1,0 +1,19 @@
+{
+    "name":"AKC NFT005",
+    "description":"The NFT Loyalty for AKC",
+    "image":"https://manh-test-nft.s3.ap-southeast-1.amazonaws.com/005.png",
+    "attributes":[
+        {
+            "trait_type":"Point",
+            "value": 500
+        },
+        {
+            "trait_type":"Coin",
+            "value": 500
+        },
+        {
+            "trait_type":"Type",
+            "value": "Voucher"
+        }
+    ]
+}
