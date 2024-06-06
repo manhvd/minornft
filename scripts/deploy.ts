@@ -23,12 +23,13 @@ async function main() {
 // console.log('LoyNFT address: ', loyNFT.address);
 // Config.setConfig(network + '.LoyNFT', loyNFT.address);
 
-const LoyNFTMKP = await ethers.getContractFactory("LoyNFTMKP");
-const loyNFTMKP = await LoyNFTMKP.deploy('0xdCA179343cDE489B6f574b8A46Fa5b5BD84Ccc04','0x9E7388Bb54dFE5d7eD25Eb599B4A21C245aCbf28');
-console.log('Loyalty NFT Market Place address: ', loyNFTMKP.address);
-Config.setConfig(network + '.LoyNFTMKP', loyNFTMKP.address);
+const demoNFTSBTContract = await ethers.getContractFactory("NFT4SBT");
+const demoNFTSBT = await demoNFTSBTContract.deploy('NFT for SBT Demo','NFT4SBTDEMO');
+console.log('NFT demoNFTSBT address: ', demoNFTSBT.address);
+Config.setConfig(network + '.demoNFTSBT', demoNFTSBT.address);
 
   await Config.updateConfig();
+  demoNFTSBT.mint("https://ipfs.io/ipfs/QmPWaZU3UyEK8M6JJDtZdnvyqFZ7MfqqxkTpq948TjdqTM");
 }
 
 // We recommend this pattern to be able to use async/await everywhere
