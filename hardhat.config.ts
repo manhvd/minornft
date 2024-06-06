@@ -8,15 +8,15 @@ const config: HardhatUserConfig = {
   networks: {
     bsctest:{
       url: "https://data-seed-prebsc-1-s1.binance.org:8545",
-      accounts: ["xxxxx"]
+      accounts: ["dfdfdf"]
+    },
+    mumbaitestnet:{
+      url: "https://rpc.cardona.zkevm-rpc.com",
+      accounts: ["fddfdf"]
     }
-    // mumbaitestnet:{
-    //   url: "https://polygon-testnet.public.blastapi.io",
-    //   accounts: ""
-    // }
   },
   etherscan: {
-    apiKey: "xxxxx"
+    apiKey: "dfffdf"
   }
 };
 
