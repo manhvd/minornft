@@ -1,0 +1,31 @@
+{
+    "name":"SBT metadata",
+    "description":"The fisrt SBT",
+    "image":"https://ipfs.io/ipfs/QmbgWBqPwNtJqaEa3cmNVoaAe2L2ia63gPNE21ndMQV3Hj",
+    "attributes":[
+        {
+            "trait_type":"Hight",
+            "value": 170,
+            "max_value": 200
+        },
+        {
+            "trait_type":"Color",
+            "value": "White"
+        },
+        {
+            "trait_type":"round1",
+            "value": 100,
+            "max_value": 150
+        },
+        {
+            "trait_type":"round2",
+            "value": 40,
+            "max_value": 45
+        },
+        {
+            "trait_type":"round3",
+            "value": 130,
+            "max_value": 160
+        }
+    ]
+}

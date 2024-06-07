@@ -1,22 +1,30 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 import "./ERC721.sol";
-/**
- * An experiment in Soul Bound Tokens (SBT's) following Vitalik's
- * co-authored whitepaper at:
- * https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763
- *
- * I propose for a rename to Non-Transferable Tokens NTT's
- */
-contract SoulboundTokenDemo is ERC721 {
-    constructor() ERC721("SoulboundTokenDemo", "SBTDemo") {}
 
-    function _beforeTokenTransfer(address from, address to, uint256 tokenId) internal override {
-        require(from == address(0), "Token transfer is not allowed");
-        super._beforeTokenTransfer(from, to, tokenId);
-    }
-
-    function mint(address to, uint256 tokenId) external {
-        _mint(to, tokenId);
-    }
+contract SBTDemo is ERC721 {
+ string public name;
+ string public symbol;
+ uint256 public tokenCount;
+ mapping(uint256 => string) private _tokenURIs;
+ constructor(string memory _name, string memory _symbol){
+    name = _name;
+    symbol = _symbol;
+ }
+ function tokenURI(uint256 tokenId) public view returns(string memory){
+    require(_owners[tokenId] != address(0),"Token does not exist");
+    return _tokenURIs[tokenId];
+ }
+ function mint(string memory _tokenURI) public{
+    tokenCount +=1;
+    _balances[msg.sender] += 1;
+    _owners[tokenCount] = msg.sender;
+    _tokenURIs[tokenCount] = _tokenURI;
+    emit Transfer(address(0), msg.sender, tokenCount);
+ }
+  //SBT specific
+ 
+ function supportInterface(bytes4 interfaceID) public pure override returns(bool){
+        return interfaceID == 0x80ac58cd || interfaceID == 0x5b5e139f;
+ }
 }

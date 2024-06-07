@@ -4,19 +4,19 @@ dotenv.config({path:__dirname + "/.env"});
 import "@nomicfoundation/hardhat-toolbox";
 
 const config: HardhatUserConfig = {
-  solidity: "0.8.17",
+  solidity: "0.8.20",
   networks: {
     bsctest:{
       url: "https://data-seed-prebsc-1-s1.binance.org:8545",
-      accounts: ["dfdfdf"]
+      accounts: ["xxxxxx"]
     },
     mumbaitestnet:{
       url: "https://rpc.cardona.zkevm-rpc.com",
-      accounts: ["fddfdf"]
+      accounts: ["xxxxxxxxxx"]
     }
   },
   etherscan: {
-    apiKey: "dfffdf"
+    apiKey: "xxxxxxxxx"
   }
 };
 

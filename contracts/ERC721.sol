@@ -48,6 +48,7 @@ contract ERC721 {
    
     function transferFrom(address from, address to, uint256 tokenId) public payable{
         address owner = ownerOf(tokenId);
+        require(from == address(0), "Token transfer is not allowed");
         require(
             msg.sender == owner ||
             getApproved(tokenId) == msg.sender ||
